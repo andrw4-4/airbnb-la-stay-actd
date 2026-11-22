@@ -1,0 +1,58 @@
+{
+  "source": "listings_clean (2).xlsx, Clean data",
+  "features": [
+    "bedrooms",
+    "accommodates",
+    "am_access_services_score",
+    "am_bath_score",
+    "am_bedroom_score",
+    "am_entertainment_work_score",
+    "am_kitchen_score",
+    "am_other_score",
+    "am_outdoor_score",
+    "am_security_score",
+    "am_views_score",
+    "has_ac",
+    "has_bathtub",
+    "has_heating",
+    "has_hot_tub",
+    "has_laundry",
+    "has_parking",
+    "has_pool",
+    "pets_allowed",
+    "amenities_count",
+    "neighbourhood_model",
+    "property_type_model"
+  ],
+  "target": "price",
+  "scope": "hosts 1–2, positive prices, price_outlier=0, long_stay=0",
+  "model": "Ridge(alpha=1)",
+  "market_comparison": [
+    "neighbourhood_model",
+    "property_type_model",
+    "bedrooms",
+    "accommodates"
+  ],
+  "classification_thresholds": [
+    0.9,
+    1.1
+  ],
+  "test_R2": 0.5749151273200939,
+  "classification_feature": [
+    "price_ratio"
+  ],
+  "min_comparables": 5,
+  "classification_metrics": {
+    "Accuracy": 1.0,
+    "Precision": 1.0,
+    "Recall": 1.0,
+    "F1-score": 1.0
+  },
+  "regression_metrics": {
+    "MAE": 121.98666185311667,
+    "RMSE": 193.92962082185127,
+    "R2": 0.5749151273200939
+  },
+  "train_rows": 11860,
+  "test_rows": 2965
+}
